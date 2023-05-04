@@ -147,27 +147,6 @@ class CsvParser {
         }
         return completeCsvMatrixLocal;
     }
-    //Google Sheet's data is in a JSON, traversal through the JSON and string manipulation are used to extract the data
-    completeMatrixForGoogleSheet() {
-        var matrixComplete = [];
-        for (var i = 0; i < this.csvHeaders.length; i++) {
-            matrixComplete[i] = [];
-        }
-        for (var i = 0; i < this.csvHeaders.length; i++) {
-            for (var key in this.csvFile) {
-                var valueCell = this.csvFile[key][this.csvHeaders[i]]["$t"];
-                if (!isNaN(valueCell)) {
-                    matrixComplete[i].push(+valueCell);
-                } else {
-                    matrixComplete[i].push(valueCell);
-                }
-            }
-        }
-        for (var i = 0; i < this.csvHeaders.length; i++) {
-            this.csvHeaders[i] = this.csvHeaders[i].slice(4, this.csvHeaders[i].length);
-        }
-        return matrixComplete;
-    }
     //checks if the first row has most of the potential header names, if not, assign dummy headers to the file.
     determineHeaders() {
         var csvHeadersLocal = [];
@@ -202,20 +181,6 @@ class CsvParser {
             }
         }
         return csvHeadersLocal;
-    }
-    //Google Sheet's data is in a JSON, extracting column names by string slicing
-    headersForGoogleSheet() {
-        var headers_sheet = [];
-        for (var key in this.csvFile) {
-            var h = this.csvFile[key];
-            for (var headKey in h) {
-                if (headKey.slice(0, 4) == "gsx$") {
-                    headers_sheet.push(headKey);
-                }
-            }
-            break;
-        }
-        return headers_sheet;
     }
     // creating the transpose of the entire data ie complete data + headers, for createSpreadsheet in View.js
     createTranspose() {
