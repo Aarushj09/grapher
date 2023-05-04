@@ -2,7 +2,6 @@ const CsvParser = require('./CsvParser');
 const SimpleDataGrapher = require('./SimpleDataGrapher');
 const ChartjsPlotter = require('./ChartjsPlotter');
 const PlotlyjsPlotter = require('./PlotlyjsPlotter');
-const iframe_phone = require('iframe-phone')
 
 class View {
     'use strict';

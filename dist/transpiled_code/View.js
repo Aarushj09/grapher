@@ -21,8 +21,6 @@ var ChartjsPlotter = require('./ChartjsPlotter');
 
 var PlotlyjsPlotter = require('./PlotlyjsPlotter');
 
-var iframe_phone = require('iframe-phone');
-
 var View =
 /*#__PURE__*/
 function () {
