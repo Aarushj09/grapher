@@ -1,0 +1,315 @@
+.main_container{
+  margin:0 auto;
+  width: 50%;
+  margin-top: 100px;
+  margin-left: 0;
+  margin-right: 0;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.main_grid_container{
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content:space-around;
+  align-items: center;
+  height: 600px;
+  grid-column-gap: 50px;
+  text-align: center;
+}
+.parent_main_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-item{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.sub_heading_import{
+  font-family: 'Ubuntu Condensed';
+  color: #1e3d7b;
+  font-size: 20px;
+  ;
+}
+.graph{
+  height: 700px;
+}
+.table_container{
+  height: 1000px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    border-color: #0059b3;
+    border-style: dashed;
+    border-width: 2px;
+    height: 150px;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: center;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.drag_drop_heading{
+  margin-top: 50px;
+}
+.text_field{
+  width: 350px;
+  border-radius: 5px;
+  height: 40px;
+  padding-left: 5px;
+
+}
+::placeholder{
+  font-size: 12px;
+}
+.or { 
+  width:45%;
+  text-align:center; 
+  border-bottom: 1px solid #cccccc; 
+  line-height:0.1em; 
+  margin:10px 0 20px;
+} 
+.or span {
+  background:#fff; 
+  padding:0 10px; 
+  font-size: 12px;
+  color: #595959;
+}
+.input_box{
+  width: 350px;
+}
+.carousel-indicators{
+  top: 30px;
+  justify-content:space-around;
+  margin:0;
+  display: flex;
+  height: 20px;
+}
+.tables{
+margin-top: 100px;
+text-align: center;
+/* height: 1200px;
+display: flex;
+flex-direction: column;
+justify-content: space-around; */
+
+}
+.graph{
+margin-top: 100px;
+}
+#canvas_container{
+width: 50%;
+margin: 0 auto;
+}
+ol.carousel-indicators li.active {
+background: #004080;
+}
+ol.carousel-indicators li{
+width: 150px;
+height: 6px;
+cursor: pointer;
+background: #cccccc;
+}
+.toggle-handle{
+background: #f2f2f2;
+width: 100px;
+}
+.toggle-on{
+text-align: left;
+margin-left: 15px;
+}
+.toggle-off{
+text-align: right;
+margin-right: 15px;
+}
+.hidden {
+   display:none;
+}
+.table_container{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+}
+.button_container{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+height: 100px;
+align-items: center;
+margin-bottom: 30px;
+}
+.table{
+font-family: 'Ubuntu Condensed';
+overflow: auto;
+width: 500px;
+}
+.feature_buttons{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+}
+.headings{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+list-style: none;
+/* margin-bottom: -160px; */
+}
+.check-inputs{
+margin-left: 10px;
+
+}
+.badge{
+padding: 10px;
+}
+.csv_string{
+height: 100px;
+width: 350px;
+}
+.main_heading{
+font-family: 'Ubuntu Condensed';
+text-align: center;
+color: #001a66;
+font-size: 40px;
+}
+.sub_heading{
+font-family: 'Ubuntu Condensed';
+text-align: center;
+color: #525357;
+font-size: 18px;
+padding-top: 5px;
+}
+.main_heading_container{
+margin-top: 40px;
+}
+.headings li{
+font-family: 'Ubuntu Condensed';
+font-size: 20px;
+}
+.heading_container{
+margin-top:80px;
+}
+.item-1{
+margin-left: 20px;
+}
+.item-2{
+margin-left: 70px;
+}
+.des{
+  display: none;
+}
+.shadow{
+  transition: box-shadow 0.3s;
+}
+
+.shadow:hover{
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#import_description{
+  visibility: hidden;
+  width: 130px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: italic;
+  color: #053574;
+}
+#import_description_dummy{
+  visibility: hidden;
+  width: 130px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-gap: 30px;
+}
+.radio {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #cccccc;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Ubuntu Condensed';
+  color: #404040;
+  height: 150px;
+}
+.radio:hover{
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.hmm{
+  background-color: #cccccc;
+  text-align: center;
+  width: 100%;
+  
+}
+#menu_holder{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 900px;
+}
+.d{
+  visibility: hidden;
+  width: 90px;
+}
+#graph_description{
+  visibility: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: italic;
+  color: #053574;
+  width: 90px;
+}
+.parent_canvas_container{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: column;
+
+}
+.canvas_container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.popover_headings{
+  font-family: 'Ubuntu Condensed';
+}
+footer {
+  width: 100%;
+  padding: 80px 50px 80px 50px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+}
+.footer-content p {
+  display: inline-block;
+  width: 70%;
+}
+.footer-content btn {
+  display: block;
+}
+.footer-buttondiv {
+  padding-top: 20px;
+}
