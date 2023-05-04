@@ -1,19 +1,19 @@
 {
-  "name": "EDA",
-  "version": "1.0.0",
-  "description": "Exploratory Data Analysis",
-  "main": "src/Grapher.js",
+  "name": "simple-data-grapher",
+  "version": "2.0.0",
+  "description": "Turns CSVs into graphs in a few simple steps; various import and export options",
+  "main": "src/PublicLab.Grapher.js",
   "scripts": {
-    "build": "watch 'babel src -d dist/transpiled_code & browserify dist/transpiled_code/SimpleDataGrapher.js -o dist/Grapher.js' src",
-    "heroku-postbuild": "babel src -d dist/transpiled_code & browserify dist/transpiled_code/SimpleDataGrapher.js -o dist/Grapher.js",
+    "build": "watch 'babel src -d dist/transpiled_code & browserify dist/transpiled_code/SimpleDataGrapher.js -o dist/PublicLab.Grapher.js' src",
+    "heroku-postbuild": "babel src -d dist/transpiled_code & browserify dist/transpiled_code/SimpleDataGrapher.js -o dist/PublicLab.Grapher.js",
     "test": "./node_modules/mocha/bin/mocha --require @babel/register --require @babel/polyfill --require jsdom-global/register spec/js/ --timeout 30000",
     "lint": "eslint ./src ./dist ./spec --fix",
-    "start": "http-server -c-1 -p ${PORT:=8001}",
+    "start": "http-server -c-1 -p ${PORT:=8000}",
     "dev_start": "http-server -c-1 -p 8000"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aarushj09/TopG"
+    "url": "git+https://github.com/publiclab/simple-data-grapher.git"
   },
   "keywords": [
     "Data-Grapher",
@@ -23,7 +23,10 @@
   ],
   "author": "Public Lab",
   "license": "GPL-3.0",
-  "homepage": "https://github.com/Aarushj09/TopG/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/publiclab/simple-data-grapher/issues"
+  },
+  "homepage": "https://github.com/publiclab/simple-data-grapher#readme",
   "dependencies": {
     "chai": "^4.2.0",
     "chartjs": "^0.3.24",
