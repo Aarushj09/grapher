@@ -13,6 +13,7 @@ var ChartjsPlotter =
 function () {
   _createClass(ChartjsPlotter, [{
     key: "determineType",
+    // 'use strict';
     value: function determineType() {
       if (this.graphType == "Basic" || this.graphType == "Stepped" || this.graphType == "Point") {
         return 'line';
@@ -171,8 +172,6 @@ function () {
 
   function ChartjsPlotter(hash, length, type, flag, canvasContainerId, elementId, graphCounting) {
     _classCallCheck(this, ChartjsPlotter);
-
-    _defineProperty(this, 'use strict', void 0);
 
     _defineProperty(this, "dataHash", {});
 

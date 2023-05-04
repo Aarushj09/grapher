@@ -1,5 +1,5 @@
 class ChartjsPlotter {
-    'use strict';
+    // 'use strict';
     dataHash = {};
     elementId = null;
     graphCounting = 0;

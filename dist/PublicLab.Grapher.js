@@ -216,7 +216,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-// import {SimpleDataGrapher} from "./SimpleDataGrapher";
 var SimpleDataGrapher = require('./SimpleDataGrapher');
 
 var Papa = require("papaparse");
@@ -228,7 +227,7 @@ function () {
   function CsvParser(file, elementId, functionParameter) {
     _classCallCheck(this, CsvParser);
 
-    _defineProperty(this, 'use strict', void 0);
+    _defineProperty(this, "use strict", void 0);
 
     _defineProperty(this, "csvFile", null);
 
@@ -247,10 +246,6 @@ function () {
     _defineProperty(this, "csvValidForYAxis", []);
 
     _defineProperty(this, "elementId", null);
-
-    _defineProperty(this, "codapHeaders", []);
-
-    _defineProperty(this, "codapMatrix", []);
 
     this.elementId = elementId;
     this.csvFile = file;
@@ -273,8 +268,6 @@ function () {
       this.csvSampleData = totalData[0];
       this.csvValidForYAxis = totalData[1];
       this.completeCsvMatrixTranspose = this.createTranspose();
-      this.codapHeaders = this.headersForCodap();
-      this.codapMatrix = this.completeMatrixForCodap();
       this.startFileProcessing();
     } //a function handler that calls one function after the other after assigning the correct values to different class variables.
 
@@ -298,8 +291,6 @@ function () {
         this.csvSampleData = totalData[0];
         this.csvValidForYAxis = totalData[1];
         this.completeCsvMatrixTranspose = this.createTranspose();
-        this.codapHeaders = this.headersForCodap();
-        this.codapMatrix = this.completeMatrixForCodap();
         this.startFileProcessing();
       }
     } //parsing a local file, works asynchronously
@@ -441,24 +432,6 @@ function () {
       }
 
       return matrixComplete;
-    } // matrix in JSON form for CODAP export
-
-  }, {
-    key: "completeMatrixForCodap",
-    value: function completeMatrixForCodap() {
-      var codapMatrix = [];
-
-      for (var i = 1; i < this.completeCsvMatrixTranspose.length; i++) {
-        var element = {};
-
-        for (var j = 0; j < this.csvHeaders.length; j++) {
-          element[this.csvHeaders[j]] = this.completeCsvMatrixTranspose[i][j];
-        }
-
-        codapMatrix.push(element);
-      }
-
-      return codapMatrix;
     } //checks if the first row has most of the potential header names, if not, assign dummy headers to the file.
 
   }, {
@@ -518,20 +491,6 @@ function () {
       }
 
       return headers_sheet;
-    } //determine a JSON for headers for CODAP
-
-  }, {
-    key: "headersForCodap",
-    value: function headersForCodap() {
-      var codapHeaders = [];
-
-      for (var i = 0; i < this.csvHeaders.length; i++) {
-        var element = {};
-        element["name"] = this.csvHeaders[i];
-        codapHeaders.push(element);
-      }
-
-      return codapHeaders;
     } // creating the transpose of the entire data ie complete data + headers, for createSpreadsheet in View.js
 
   }, {
